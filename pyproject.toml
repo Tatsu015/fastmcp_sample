@@ -1,0 +1,7 @@
+[project]
+name = "fastmcp-sample"
+version = "0.1.0"
+description = "FastMCP sample project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
