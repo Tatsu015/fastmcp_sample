@@ -1,0 +1,10 @@
+{
+    "mcpServers": {
+        "fastmcp_sample": {
+            "url": "http://127.0.0.1:8000/mcp",
+            "headers": {
+                "x-token": "very-important-token"
+            }
+        }
+    }
+}
