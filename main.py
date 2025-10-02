@@ -14,18 +14,18 @@ api_app = FastAPI()
 users: dict[int, User] = {}
 
 
-@api_app.post("/users")
+@api_app.post("/users", operation_id="create_users")
 def create_user(user: User):
     users[user.id] = user
     return users[user.id]
 
 
-@api_app.get("/users")
+@api_app.get("/users", operation_id="read_users")
 def read_users():
     return list(users.values())
 
 
-@api_app.get("/users/{user_id}")
+@api_app.get("/users/{user_id}", operation_id="read_user")
 def read_user(user_id: int):
     user = users[user_id]
     return {"id": user_id, "name": user.name, "age": user.age}
